@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('project_name');
+            $table->integer('user_id');
             $table->string('domain_name');
             $table->string('project_api_key');
             $table->timestamp('key_generated_time');

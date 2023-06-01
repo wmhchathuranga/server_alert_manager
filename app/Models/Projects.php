@@ -11,6 +11,7 @@ class Projects extends Model
 
     protected $fillable = [
         'project_name',
+        'user_id',
         'domain_name',
         'project_api_key',
         'key_generated_time',
