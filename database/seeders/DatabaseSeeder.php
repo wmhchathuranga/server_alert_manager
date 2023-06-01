@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TelegramSeeder::class);
         $this->call(LogsSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(TeamSeeder::class);
 
         // \App\Models\User::factory(10)->create();
 
