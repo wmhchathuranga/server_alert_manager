@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => "v1"], function () {
 
-    Route::get('projects/{project_api_key}', [TelegramController::class, 'index']);
+    Route::post('projects/{project_api_key}', [TelegramController::class, 'index']);
 });

@@ -21,10 +21,11 @@ class GuzzleController extends Controller
         $chatId = $msg_content->channel_id;
 
         $project_name = $msg_content->project_name;
+        $domain_name = $msg_content->domain_name;
         $severity_level = $msg_content->severity;
         $error_msg = $msg_content->error_msg;
 
-        $formattedMessage = "*Alert Manager*\n\n*Project Name*: $project_name\n*Severity Level*: $severity_level\n*Error Message*: $error_msg";
+        $formattedMessage = "*Alert Manager*\n\n*Project Name*: $project_name\n*Domain Name*: $domain_name\n*Severity Level*: $severity_level\n*Error Message*: $error_msg";
         // Set the message text
 
         try {
