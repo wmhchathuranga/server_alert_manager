@@ -20,8 +20,8 @@ class TelegramFactory extends Factory
     {
         return [
             'project_id' => $this->faker->numberBetween(1, 10),
-            'bot_api_key' => "6126915313:AAEqbNEkKnNbqWE5XyyuzJla49OBSPjIEOY",
-            'channel_id' => "-618586363",
+            'bot_api_key' => "6248662752:AAHJUog1kx2HQqBzcSvaxUAAHONMQQipJWc",
+            'channel_id' => "-988576488",
         ];
     }
 }
