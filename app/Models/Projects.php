@@ -10,6 +10,7 @@ class Projects extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'project_name',
         'domain_name',
         'project_api_key',

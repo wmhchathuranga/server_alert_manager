@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('project_name');
             $table->string('domain_name');
             $table->string('project_api_key');

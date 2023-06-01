@@ -19,6 +19,7 @@ class ProjectsFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => $this->faker->numberBetween(10),
             'project_name' => $this->faker->words(2, true),
             'domain_name' => $this->faker->domainName,
             'project_api_key' => $this->faker->uuid,
