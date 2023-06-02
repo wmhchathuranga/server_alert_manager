@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogsController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +28,5 @@ Route::middleware([
     // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/logs', [LogsController::class, 'index'])->name('logs');
     Route::get('/logs/{project_api_key}', [LogsController::class, 'index']);
-
-
-    // Route::get('/dashboard', function () {
-    //     return view('dashboard');
-    // })->name('dashboard');
-
+    // Route::resource('/project', ProjectsController::class);
 });
-
