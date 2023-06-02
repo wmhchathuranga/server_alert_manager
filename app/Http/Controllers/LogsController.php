@@ -3,17 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Models\Logs;
+use App\Models\Projects;
 use App\Http\Requests\StoreLogsRequest;
 use App\Http\Requests\UpdateLogsRequest;
+use Illuminate\Support\Facades\Auth;
 
 class LogsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index($project_api_key)
+    { {
+            $user = Auth::user();
+            //dd($user);
+            $user_id = $user->id;
+            //$project_for_user = Projects::all()->where('user_id', "=", $user_id);
+
+
+            $project = Projects::all()->where('user_id', "=", $user_id)->where('project_api_key', "=", $project_api_key)->first();
+            // dd($project);
+            $project_with_id = $project->id;
+            //dd($project_with_id);
+            $logs=Logs::all()->where('$project_id', "=", $project_with_id);
+            //dd($logs);
+            return view('log-views', compact('logs'));
+        }
     }
 
     /**

@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $user = Auth::user();
         $user_id = $user->id;
         $projects = Projects::all()->where('user_id', "=", $user_id);
-        // dd($projects);
+        //dd($projects);
         return view('dashboard', compact('projects'));
     }
 }
