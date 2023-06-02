@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [DashboardController::class, 'index'])->middleware(['auth:sanctum', config('jetstream.auth_session')])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth:sanctum', config('jetstream.auth_session')])->name('dashboard1');
 
 Route::middleware([
     'auth:sanctum',

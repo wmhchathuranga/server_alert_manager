@@ -22,12 +22,8 @@ class LogsController extends Controller
 
 
             $project = Projects::all()->where('user_id', "=", $user_id)->where('project_api_key', "=", $project_api_key)->first();
-            // dd($project);
-            $project_with_id = $project->id;
-            //dd($project_with_id);
-            $logs=Logs::all()->where('$project_id', "=", $project_with_id);
-            //dd($logs);
-            return view('log-views', compact('logs'));
+            $logs_paginated = Logs::all()->where('project_id', '=', $project->id);
+            return view('log-views', compact('logs_paginated'));
         }
     }
 
